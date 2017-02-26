@@ -1,0 +1,5 @@
+FROM node
+MAINTAINER Dominik Liebmann <dominik_l@gmx.net>
+RUN npm install express@4.x && npm install swagger-express-middleware && rm -rf /node_modules/swagger-express-middleware/samples/
+EXPOSE 8000
+

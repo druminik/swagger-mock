@@ -1,0 +1,13 @@
+swagger-mock:  
+  image: dli/swagger-mock
+  volumes:
+    - ./samples:/node_modules/swagger-express-middleware/samples
+   #- ./data/www:/usr/share/nginx/html/www
+   #- ./data/images:/usr/share/nginx/html/images
+  ports:
+   - "8000:8000"
+  environment:
+   - APP=sample1.js
+  #command: /bin/bash -c "rm -rf /var/cache/nginx/client_temp && nginx -g 'daemon off;'"
+  command: /bin/bash -c "cd /node_modules/swagger-express-middleware/samples && node $APP"
+  container_name: swagger-mock
