@@ -12,7 +12,9 @@ Three files are necessary:
 Just update the three files and run
 
 docker build -t \<myimage> .
+
 and
+
 docker run --name \<mycontainer> -P \<myimage>
 
 Your mock server will be available on http://\<docker_host_ip>:8000
